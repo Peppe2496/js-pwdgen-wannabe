@@ -5,49 +5,39 @@
 
 let name = prompt("Inserisci il tuo nome");
 let surname = prompt("Inserisci il tuo cognome");
-let favoriteColor = prompt("Inserisci il tuo colore preferito");            // Esercizio base
+let favoriteColor = prompt("Inserisci il tuo colore preferito");
+let firstNumber = prompt("Inserisci un numero");
+let secondNumber = prompt("Inserisci un secondo numero");
+let randomNumber = Math.floor((Math.random() * 100)+ 0 );
 
 
-let passwordGenerator = `
-
-----Password: ${name}${surname}${favoriteColor}21
-
-`;
-console.log(passwordGenerator)
-
-
-/*
-let name = prompt("Inserisci il tuo nome");
-let surname = prompt("Inserisci il tuo cognome");
-let favoriteColor = prompt("Inserisci il tuo colore preferito");            // Password con divisione
-let firstNumber = prompt("Scegli un numero");
-let secondNumber = prompt("Scegli un secondo numero");
-
-// Risultato del calcolo
-
-firstNumber= parseInt(firstNumber);
-secondNumber= parseInt(secondNumber);
+firstNumber = parseInt(firstNumber);
+secondNumber = parseInt(secondNumber);
 let divisionResult = firstNumber / secondNumber;
 
-let passwordGenerator = `
+console.log(`
 
-----Password: ${name}${surname}${favoriteColor}${divisionResult}
+password: ${name}${surname}${favoriteColor}21
+password2: ${name}${surname}${favoriteColor}${divisionResult}
+password3: ${name}${surname}${favoriteColor}${randomNumber}
 
-`;
-console.log(passwordGenerator)
-*/
-
-/*
-let name = prompt("Inserisci il tuo nome");
-let surname = prompt("Inserisci il tuo cognome");
-let favoriteColor = prompt("Inserisci il tuo colore preferito");            // Password con numero random
-let randomNumber = Math.floor((Math.random() * 100) + 0);
+`)
 
 
-let passwordGenerator = `
 
-----Password: ${name}${surname}${favoriteColor}${randomNumber}
 
-`;
-console.log(passwordGenerator)
-*/
+
+
+     
+
+
+
+
+
+
+
+document.getElementById('firstpassword').innerHTML= name+surname+favoriteColor+21;
+document.getElementById('secondpassword').innerHTML= name+surname+favoriteColor+divisionResult;
+document.getElementById('thirdpassword').innerHTML= name+surname+favoriteColor+randomNumber;
+
+
